@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XY Tamil</title>
+    <link rel="stylesheet" href="home.website.css">
+</head>
+<body>
+    <header>
+        <div class="logo">XY Tamil</div>
+        <nav>
+            <ul>
+                <li><a href="home.website.html">Movies</a></li>
+                <li><a href="songs.html">Songs</a></li>
+                <li><a href="wallpaper.html">Wallpaper</a></li>
+                <li><a href="Detail.html">Details</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="signup.website.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    <main>
+        <section class="movies">
+            <h2>Movies</h2>
+            <div class="movie-grid">
+                <div class="movie">
+                    <img src="Vijay.jpg" alt="LEO">
+                    <p>VIJAY</p>
+                    <select class="linkSelect">
+                        <option value="" selected disabled>Vijay Movies</option>
+                        <option value="https://youtu.be/hK_7ORgJYFs">Mersal</option>
+                        <option value="https://youtu.be/WR73Ia26SkQ">Thupupakki</option>
+                        <option value="https://youtu.be/nZZKs6UBg7w">Shahjahan</option>
+                    </select>
+                </div>
+                <div class="movie">
+                    <img src="Kamal.jpg" alt="VIKRAM">
+                    <p>Kamal Haasan</p>
+                    <select class="linkSelect">
+                        <option value="" selected disabled>Kamal Haasan Movies</option>
+                        <option value="https://youtu.be/AVWgOMAVT08">Nayagan</option>
+                        <option value="https://youtu.be/QKqF3epzaFg">Aalavandhan</option>
+                        <option value="https://youtu.be/Aqwy7jHhmpI">Guna</option>
+                    </select>
+                </div> 
+                <div class="movie">
+                    <img src="Suriya.jpg" alt="Suriya">
+                    <p>SURIYA</p>
+                    <select class="linkSelect">
+                        <option value="" selected disabled>Suriya Movies</option>
+                        <option value="https://youtu.be/BQSAFVtNtpI">Maattrraan</option>
+                        <option value="https://youtu.be/Rnr9pLd6mzo">24</option>
+                        <option value="https://youtu.be/ouaI5B0ubVk">Anjaan</option>
+                    </select>
+                </div>
+                <div class="movie">
+                    <img src="AJITH.jpg" alt="AJITH">
+                    <p>AJITH</p>
+                    <select class="linkSelect">
+                        <option value="" selected disabled>Ajith Movies</option>
+                        <option value="https://youtu.be/R8Jy5Zynf5s">Dheena</option>
+                        <option value="https://youtu.be/rCm4hmAQYcU">Billa</option>
+                        <option value="https://youtu.be/jywAGKllIAs">Vivegam</option>
+                    </select>
+                </div>
+                <div class="movie">
+                    <img src="Rajini.jpg" alt="Rajini">
+                    <p>Rajinikanth</p>
+                    <select class="linkSelect">
+                        <option value="" selected disabled>Rajinikanth Movies</option>
+                        <option value="https://youtu.be/l0UtAZTIweU">Thalapathi</option>
+                        <option value="https://youtu.be/4ZO68i091D4">Annamalai</option>
+                        <option value="https://youtu.be/quvkJSM_028">Muthu</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 XY Tamil, Inc.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.linkSelect').forEach(select => {
+            select.addEventListener('change', function() {
+                var url = this.value;
+                if (url) {
+                    window.location.href = url;
+                }
+            });
+        });
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var query = document.getElementById('searchInput').value;
+            if (query) {
+                window.location.href = 'search.html?query=' + encodeURIComponent(query);
+            }
+        });
+    </script>
+</body>
+</html>

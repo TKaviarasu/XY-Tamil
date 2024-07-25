@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('MAIN.PIC.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-wrapper {
+    background: rgba(16, 16, 16, 0.8);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #eff4f1;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #f7f4f4;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #faf7f7;
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #2c2e2c;
+}
+
+button {
+    width: 40%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #16a245;
+}
+
+p {
+    margin-top: 20px;
+    color: #f9f9f9;
+}
+
+a {
+    color: #f8faf8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
